@@ -1,21 +1,13 @@
 # FastAPI CRUD Application
 
-This project is a FastAPI application that provides a simple CRUD (Create, Read, Update, Delete) API for managing items with an expiration date. The application connects to a MongoDB database and allows users to perform various operations on item entities.
+This project is a FastAPI application that provides a simple CRUD (Create, Read, Update, Delete) API for managing items with an expiration date. The application connects to a MongoDB database and allows users to perform various operations.
 
 ## Table of Contents
-- [Features](#features)
 - [Installation](#installation)
 - [API Endpoints](#api-endpoints)
 - [Folder Structure](#folder-structure)
 - [Contributing](#contributing)
 
-## Features
-
-- Create items with a name, email, item name, quantity, and expiration date.
-- Retrieve all items or a specific item by ID.
-- Update an existing item by ID.
-- Delete an item by ID.
-- Validates expiration date to ensure it is in `YYYY-MM-DD` format.
 
 ## Installation
 
@@ -36,21 +28,21 @@ To run this application, ensure you have Python 3.7 or higher installed. Follow 
 
 ## Folder Structure
 
-vodex-assignment/
-│
-├── app/
-│   ├── __init__.py
-│   ├── main.py               # Entry point for the FastAPI application
-│   ├── routers/
-│   │   ├── __init__.py
-│   │   └── items.py          # CRUD operations for items
-│   ├── models/
-│   │   ├── __init__.py
-│   │   └── item.py           # Pydantic models for request/response
-│   └── database.py           # Database connection setup
-│
-├── requirements.txt          # Project dependencies
-└── .env                      # Environment variables (MongoDB connection string)
+   vodex-assignment/
+   │
+   ├── app/
+   │   ├── __init__.py
+   │   ├── main.py               # Entry point for the FastAPI application
+   │   ├── routers/
+   │   │   ├── __init__.py
+   │   │   └── items.py          # CRUD operations for items
+   │   ├── models/
+   │   │   ├── __init__.py
+   │   │   └── item.py           # Pydantic models for request/response
+   │   └── database.py           # Database connection setup
+   │
+   ├── requirements.txt          # Project dependencies
+   └── .env                      # Environment variables (MongoDB connection string)
 
 
 ## API Endpoints
