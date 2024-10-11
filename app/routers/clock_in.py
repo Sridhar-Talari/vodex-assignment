@@ -37,7 +37,7 @@ async def filter_clock_ins(email: Optional[str] = None,
     if location:
         query['location'] = location
     if insert_datetime:
-        query['insert_datetime'] = {'$gt': insert_datetime}
+        query['insert_datetime'] = {'$gt': insert_datetime.strftime("%Y-%m-%d %H:%M:%S")}
 
     clock_ins = list(DB["clock_in"].find(query))
     for clock_in in clock_ins:
@@ -67,7 +67,7 @@ async def update_clock_in(id: str, clock_in: ClockInUpdateModel):
         raise HTTPException(status_code=404, detail="Clock-in record not found")
 
     # Get the updated clock-in to return
-    updated_clock_in = DB["clockins"].find_one({"_id": ObjectId(id)})
+    updated_clock_in = DB["clock_in"].find_one({"_id": ObjectId(id)})
     updated_clock_in['id'] = str(updated_clock_in['_id'])
     return ClockInResponseModel(**updated_clock_in)
 
