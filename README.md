@@ -28,21 +28,21 @@ To run this application, ensure you have Python 3.7 or higher installed. Follow 
 
 ## Folder Structure
 
-   vodex-assignment/
-   │
-   ├── app/
-   │   ├── __init__.py
-   │   ├── main.py               # Entry point for the FastAPI application
-   │   ├── routers/
-   │   │   ├── __init__.py
-   │   │   └── items.py          # CRUD operations for items
-   │   ├── models/
-   │   │   ├── __init__.py
-   │   │   └── item.py           # Pydantic models for request/response
-   │   └── database.py           # Database connection setup
-   │
-   ├── requirements.txt          # Project dependencies
-   └── .env                      # Environment variables (MongoDB connection string)
+    vodex-assignment/
+    │
+    ├── app/
+    │   ├── __init__.py
+    │   ├── main.py               # Entry point for the FastAPI application
+    │   ├── routers/
+    │   │   ├── __init__.py
+    │   │   └── items.py          # CRUD operations for items
+    │   ├── models/
+    │   │   ├── __init__.py
+    │   │   └── item.py           # Pydantic models for request/response
+    │   └── database.py           # Database connection setup
+    │
+    ├── requirements.txt          # Project dependencies
+    └── .env                      # Environment variables (MongoDB connection string)
 
 
 ## API Endpoints
